@@ -1,0 +1,17 @@
+article{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#special{
+    background-color: yellow;
+}
+.alert{
+    border: solid 1px;
+}
+.alert.go{
+    border: solid 1px;
+    background-color: green;
+}
+.stop{
+    border: solid 1px;
+    background-color: red;
+}

@@ -1,0 +1,12 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 + p {
+    color: red;
+}
+.list{
+    list-style-type: none;
+}
+.list > li{
+    border-bottom: solid 1px;
+}
