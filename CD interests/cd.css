@@ -1,0 +1,28 @@
+.cd_img>img{
+    width: 250px;
+}
+.cd_meta{
+    display: flex;
+    justify-content: space-between;
+}
+.video_logo>a>img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    display: flex;
+    gap: 20px;
+}
+.cd{
+    border: 2px solid black;
+    padding: 1%;
+}
+body{
+    background-color: gray;
+}
+.cdmeta2{
+    text-align: right;
+}
