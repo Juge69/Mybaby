@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registratieformulier</title>
+    <style>
+        main {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color:
+                #45a049;
+        }
+
+        .docx23 .input-icons i {
+            position: absolute;
+        }
+
+        .icon {
+            padding-top: 18px;
+            color: green;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <h2>Registratieformulier</h2>
+        <form action="result.php" method="POST">
+            <div class="input-icons"> 
+                
+                <i class="fa fa-user icon"></i> 
+                <input class="input-field" type="text" id="fname"
+                    name="firstname" placeholder="voornaam" required> </div> 
+
+                    <i class="fa-solid fa-address-book"></i>
+                    <input class="input-field" type="text" id="lname" 
+                    name="lastname" placeholder="achternaam" required>
+
+                    <i class="fa-solid fa-envelope"></i>                    
+                      <input class="input-field" type="email" id="email" name="email" placeholder="email" required> 
+
+                      <i class="fa-solid fa-lock"></i>
+                       <input type="password" id="password" name="password" placeholder="wachtwoord" required>
+    
+                <i class="fa-solid fa-lock"></i>
+                         <input type="password" id="cpassword" name="confirm_password" placeholder="bevestig wachtwoord" required>                     <i class="fa-solid fa-calendar"></i>
+             <input type="date" id="bday" name="birthday"> <label for="bio">Biografie</label> 
+             <textarea id="bio" name="biography" rows="4"cols="50"></textarea> 
+             <label for="interests">Interesses</label> <select id="interests"
+              
+             name="interests[]" multiple>
+                <option value="music">Muziek</option>
+                <option value="sports">Sport</option>
+                <option value="movies">Films</option>
+            </select> <label for="photo">Foto</label> <input type="file" id="photo" name="photo" accept="image/*">
+            <input type="submit" name="submit" value="Registreren">
+        </form>
+    </main>
+</body>
+<!-- 10 -Formulieren.docx20sturen. Dit kan een reactie (lees: response) opleveren zonder de pagina te herladen. Deze techniek wordt vaak uitgevoerd met behulp van de `fetch` API of de wat oudere manier met het `XMLHttpRequest` object in JavaScript.In ondertaand voorbeeld wordt op asynchrone wijze de Fetch methode binnen Javascript gebruikt om de formulierdata naar het bestand "submit_form.php" te versturen. Bij aankomst van de data verstuurt dit bestand een JSON string terug welke in de console wordt getoond.Javascript -->
+<script> document.querySelector('form')
+.addEventListener('submit', function(event) 
+{   event.preventDefault(); varformData = newFormData(event.target); 
+  fetch('result.php', {method: 'POST', body: formData})   
+    .then(response => response.json())     .then(data => console.log(data)); }); </script>
