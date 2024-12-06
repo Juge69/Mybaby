@@ -18,18 +18,31 @@
     let a = 5;
     let b = 10;
     let c = 15;
+    let d = (a + b + c) / 3;
 
+    document.getElementById('opdracht1').innerHTML = d;
 
     // 2. Schrijf een expressie die controleert of een getal deelbaar is door 2. In het geval het getal deelbaar is door 2
     // zet je een 0 in het <div> element met id="opdracht2", anders zet je een 1.
-    let getal = 10;
+    let getal = prompt("hier met je getal");
+    let remander = getal%2;
+    let output = null;
 
+    if (remander == 0) {
+        alert = `Opdracht 2: het getal is ${getal} is even`
+    }else if (remander == 1) {
+        alert = `Opdracht 2: het getal is ${getal} is oneven`
+    }
+
+    document.getElementById('opdracht2').innerHTML = remander;
 
     // 3. Schrijf een expressie waarbij de waarde van x met 5 wordt vermenigvuldigd en daarna met 3
     // wordt verminderd. Plaats de uitkomst van de expressie in het <div> element met id="opdracht3"
-    let x = 5;
-
-
+    let y = prompt("geef getal nuuuuuuuuuuuuuuuuuuu!");
+    let x = y;
+    let z = x*5 -3;
+    console.log(z);
+    document.getElementById('opdracht3').innerHTML = z;
 
 
 </script>
