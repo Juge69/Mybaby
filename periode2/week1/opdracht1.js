@@ -1,0 +1,1 @@
+// gewoon 1+1 2-1 2*2 6/3 in de console in de je web browser
