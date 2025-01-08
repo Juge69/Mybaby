@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Controle structuren en Lussen - Opdracht 3</title>
+</head>
+
+<body>
+    <script>
+        //alert('De computer heeft een random getal tussen de 0 en 100 in zijn geheugen opgeslagen, kun jij dit getal raden?'); 
+        let random_getal = Math.floor(Math.random() * 100);
+         
+
+        let playerchoise = prompt('vul hier het nummer in');
+        playerchoise = parseInt(playerchoise);
+
+        if (playerchoise == random_getal) {
+            console.log('Gefeliciteerd, je hebt het getal geraden!');
+        } else {
+            console.log('Helaas, je hebt het getal niet geraden!');
+        }
+        
+        </script>
+</body>
+
+</html>
